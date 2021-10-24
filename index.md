@@ -1,6 +1,6 @@
 ## IPMing :D
 
-Hello and Welcome to our IPM project, we IPMing!
+Hello and Welcome to our IPM project
 ---
 ## G1
 - 52919, Pedro Dimas                           
