@@ -11,4 +11,7 @@ Hello and Welcome to our IPM project, we IPMing!
 ---
 
 # Stage 1
-To Access Stage1 Click the blue button "View on GitHubd"
+[Download Stage1](https://github.com/PedromDimas/IPM/blob/main/Stage1.pdf)
+
+# Stage 2 
+[Download Stage2](https://github.com/PedromDimas/IPM/blob/main/Fase2.pdf)
