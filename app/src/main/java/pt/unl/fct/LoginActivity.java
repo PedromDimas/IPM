@@ -16,7 +16,7 @@ public class LoginActivity extends AppCompatActivity {
         Button loginBtn = findViewById(R.id.btn_log_in);
         loginBtn.setOnClickListener(v -> {
             System.out.println("Going on a trip");
-            startActivity(new Intent(this,MapViewActivity.class));
+            startActivity(new Intent(this,MainAppActivity.class));
         });
 
         TextView btn=findViewById(R.id.txtview_create_acc);
