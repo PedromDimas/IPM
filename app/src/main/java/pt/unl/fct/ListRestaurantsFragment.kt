@@ -1,10 +1,17 @@
 package pt.unl.fct
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.BaseAdapter
+import android.widget.ListView
+import android.widget.TextView
+import androidx.navigation.fragment.findNavController
+import pt.unl.fct.data.model.RestaurantListAdapter
+import java.text.FieldPosition
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,14 +34,58 @@ class ListRestaurantsFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_list_restaurants, container, false)
+
+        val view = inflater.inflate(R.layout.fragment_list_restaurants, container, false)
+
+        val listView = view.findViewById<ListView>(R.id.listRestaurantsFragment)
+        listView.adapter = ListAdapter(this)
+
+        return listView
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+    }
+
+    private class ListAdapter(context: Context): BaseAdapter() {
+        private val mContext: Context = context
+
+        override fun getCount(): Int {
+            return 5
+        }
+
+        override fun getItem(position: Int): Any {
+            "test string";
+            return "test string";
+        }
+
+        override fun getItemId(position: Int): Long {
+            return position.toLong();
+        }
+
+        override fun getView(position: Int, convertView: View?, viewGroup: ViewGroup?): View {
+            val layoutInflator = LayoutInflater.from(mContext)
+            val entry = layoutInflator.inflate(R.layout.list_item_restaurant, viewGroup, false)
+
+            val restaurantName = entry.findViewById<TextView>(R.id.restaurantName)
+            restaurantName.text = "restaurant[position].restaurantName()"
+
+            val restaurantRating = entry.findViewById<TextView>(R.id.restaurantRating)
+            restaurantName.text = "restaurant[position].restaurantRating()"
+
+            val restaurantPrice = entry.findViewById<TextView>(R.id.restaurantPrice)
+            restaurantName.text = "restaurant[position].restaurantPrice()"
+
+            return entry
+        }
+
     }
 
     companion object {
