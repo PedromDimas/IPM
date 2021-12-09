@@ -11,13 +11,13 @@
         android:label="Find Restaurants"
         tools:layout="@layout/fragment_maps" />
     <fragment
-        android:id="@+id/listRestaurantsFragment"
-        android:name="pt.unl.fct.ListRestaurantsFragment"
-        android:label="Search Restaurants"
-        tools:layout="@layout/fragment_list_restaurants" />
-    <fragment
         android:id="@+id/profileFragment"
         android:name="pt.unl.fct.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/listRestaurantsFragment"
+        android:name="pt.unl.fct.ListRestaurantsFragment"
+        android:label="Search Restaurants"
+        tools:layout="@layout/fragment_blank" />
 </navigation>

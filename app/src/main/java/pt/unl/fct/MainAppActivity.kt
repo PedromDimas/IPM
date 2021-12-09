@@ -2,18 +2,12 @@ package pt.unl.fct
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.findFragment
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import pt.unl.fct.data.model.Restaurant
-import pt.unl.fct.data.model.RestaurantListAdapter
-import pt.unl.fct.databinding.ActivityMainBinding
 
 class MainAppActivity : AppCompatActivity() {
 
