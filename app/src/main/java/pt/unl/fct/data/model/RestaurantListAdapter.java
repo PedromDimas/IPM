@@ -9,15 +9,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentActivity;
+
 import java.util.ArrayList;
+import java.util.List;
 
 import pt.unl.fct.R;
 
-public class RestaurantListAdapter extends ArrayAdapter {
+public class RestaurantListAdapter extends ArrayAdapter<Restaurant> {
 
-    public RestaurantListAdapter(Context context, ArrayList<Restaurant> userArrayList){
+    public RestaurantListAdapter(FragmentActivity activity, ArrayList<Restaurant> userArrayList){
 
-        super(context,R.layout.list_item_restaurant,userArrayList);
+        super(activity,R.layout.list_item_restaurant,userArrayList);
 
     }
 
@@ -40,7 +43,6 @@ public class RestaurantListAdapter extends ArrayAdapter {
         restaurantRating.setText(restaurant.restaurantRating);
         restaurantPrice.setText(restaurant.restaurantPrice);
 
-//        return convertView;
-        return super.getView(position, convertView, parent);
+        return convertView;
     }
 }

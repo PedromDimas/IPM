@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -15,6 +16,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 import pt.unl.fct.data.model.Restaurant;
+import pt.unl.fct.data.model.RestaurantList;
 import pt.unl.fct.data.model.RestaurantListAdapter;
 
 /**
@@ -72,32 +74,22 @@ public class ListRestaurantsFragment extends Fragment {
 
         ListView lv = (ListView) view.findViewById(R.id.listview);
 
-        //HARDCODED
-        /*ArrayList<Restaurant> list = new ArrayList<>();
-        Restaurant r1 = new Restaurant(01,"name01","10/10","1$",38.736946, -9.142685);
-        Restaurant r2 = new Restaurant(01,"name02","10/10","1$",38.3947, -9.0420);
-        Restaurant r3 = new Restaurant(01,"name03","10/10","1$",38.676525, -9.165105);
+        //Hardcoded list of restaurant
+        RestaurantList restaurantList = new RestaurantList();
 
-        list.add(r1);
-        list.add(r2);
-        list.add(r3);*/
-
-        String[] items = {
-                "Restaurant 1",
-                "Restaurant 2",
-                "Restaurant 3"
-        };
-
-        ArrayAdapter<String> list = new ArrayAdapter<String>(
-                getActivity(),
-                android.R.layout.simple_list_item_1,
-                items
-        );
-
-
-        ListAdapter adapter = list;
-
+        //Initializing the list adapter and affecting it to the view
+        ArrayAdapter<Restaurant> restaurantListAdapter = new RestaurantListAdapter(getActivity(), (ArrayList<Restaurant>) restaurantList.getRestaurantList());
+        ListAdapter adapter = restaurantListAdapter;
         lv.setAdapter(adapter);
+
+        //Managing the clicking action
+        lv.setClickable(true);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+            }
+        });
 
         return view;
     }
