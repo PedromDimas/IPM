@@ -37,8 +37,8 @@ public class InfoWindow implements GoogleMap.InfoWindowAdapter {
         ImageView iv = view.findViewById(R.id.restaurantImage);
 
         for (Restaurant r : restaurantList.getRestaurantList()) {
-            if (r.getRestaurantName().equals(title)){
-                iv.setImageResource(r.getRestaurantImage());
+            if (r.getName().equals(title)){
+                iv.setImageResource(r.getMainImage());
             }
         }
 

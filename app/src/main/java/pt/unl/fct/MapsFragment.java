@@ -39,7 +39,7 @@ public class MapsFragment extends Fragment{
             for (Restaurant r: restaurantList.getRestaurantList()) {
 
                 LatLng pos = new LatLng(r.getLatitude(), r.getLongitude());
-                googleMap.addMarker(new MarkerOptions().position(pos).title(r.getRestaurantName()));
+                googleMap.addMarker(new MarkerOptions().position(pos).title(r.getName()));
 
 
             }

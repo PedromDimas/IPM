@@ -34,96 +34,40 @@ public class Restaurant {
         return mainImage;
     }
 
-    public List<Integer> getImagesIds() {
-        return imagesIds;
+    public void setMainImage(int mainImage) {
+        this.mainImage = mainImage;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getRating() {
-        return rating;
-    }
-
-    public String getPrice() {
-        return price;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public double getLatitude() {
-        return latitude;
-    }
-
-    public double getLongitude() {
-        return longitude;
-    }
-
-    public void setMainImage(int mainImage) {
-        this.mainImage = mainImage;
-    }
-
-    public void setImagesIds(List<Integer> imagesIds) {
-        this.imagesIds = imagesIds;
-    }
-
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getRating() {
+        return rating;
     }
 
     public void setRating(String rating) {
         this.rating = rating;
     }
 
+    public String getPrice() {
+        return price;
+    }
+
     public void setPrice(String price) {
         this.price = price;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public void setLatitude(double latitude) {
-        this.latitude = latitude;
-    }
-
-    public void setLongitude(double longitude) {
-        this.longitude = longitude;
-    }
-
-    public int getRestaurantImage() {
-        return restaurantImage;
-    }
-
-    public void setRestaurantImage(int restaurantImage) {
-        this.restaurantImage = restaurantImage;
-    }
-
-    public String getRestaurantName() {
-        return restaurantName;
-    }
-
-    public void setRestaurantName(String restaurantName) {
-        this.restaurantName = restaurantName;
-    }
-
-    public String getRestaurantRating() {
-        return restaurantRating;
-    }
-
-    public void setRestaurantRating(String restaurantRating) {
-        this.restaurantRating = restaurantRating;
-    }
-
-    public String getRestaurantPrice() {
-        return restaurantPrice;
-    }
-
-    public void setRestaurantPrice(String restaurantPrice) {
-        this.restaurantPrice = restaurantPrice;
     }
 
     public double getLatitude() {
@@ -140,5 +84,13 @@ public class Restaurant {
 
     public void setLongitude(double longitude) {
         this.longitude = longitude;
+    }
+
+    public List<Integer> getImagesIds() {
+        return imagesIds;
+    }
+
+    public void setImagesIds(List<Integer> imagesIds) {
+        this.imagesIds = imagesIds;
     }
 }
