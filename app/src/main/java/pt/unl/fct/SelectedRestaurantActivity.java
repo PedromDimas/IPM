@@ -24,6 +24,8 @@ public class SelectedRestaurantActivity extends AppCompatActivity {
             Restaurant restaurant = new Restaurant(intent.getIntExtra("mainImage", 0), intent.getStringExtra("name"), intent.getStringExtra("rating"), intent.getStringExtra("price")
                     , intent.getStringExtra("description"), intent.getDoubleExtra("latitude", 0), intent.getDoubleExtra("longitude", 0));
 
+            System.out.println(restaurant.getDescription());
+
             ImageView restaurantImage = findViewById(R.id.selectedRestaurantImage);
             TextView restaurantName = findViewById(R.id.selectedRestaurantName);
             TextView restaurantDescription = findViewById(R.id.selectedRestaurantDescription);

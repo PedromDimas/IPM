@@ -17,6 +17,7 @@ public class Restaurant {
         this.latitude = latitude;
         this.longitude = longitude;
         this.imagesIds = new ArrayList<Integer>();
+        this.description = description;
     }
 
     public Restaurant(int mainImage, String name, String rating, String price, String description, double latitude, double longitude, List<Integer> imagesIds) {

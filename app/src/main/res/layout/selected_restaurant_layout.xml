@@ -94,24 +94,27 @@
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_centerInParent="true"
+                            android:layout_margin="10dp"
                             android:src="@drawable/h3"
-                            android:layout_margin="10dp" />
+                            tools:srcCompat="@tools:sample/avatars" />
 
                         <ImageView
                             android:id="@+id/restaurantImage1"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_centerInParent="true"
+                            android:layout_margin="10dp"
                             android:src="@drawable/h3"
-                            android:layout_margin="10dp" />
+                            tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
                         <ImageView
                             android:id="@+id/restaurantImage2"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_centerInParent="true"
+                            android:layout_margin="10dp"
                             android:src="@drawable/h3"
-                            android:layout_margin="10dp" />
+                            tools:srcCompat="@android:drawable/ic_lock_idle_low_battery" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -131,24 +134,27 @@
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_centerInParent="true"
+                            android:layout_margin="10dp"
                             android:src="@drawable/h3"
-                            android:layout_margin="10dp" />
+                            tools:srcCompat="@android:drawable/sym_action_call" />
 
                         <ImageView
                             android:id="@+id/restaurantImage4"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_centerInParent="true"
+                            android:layout_margin="10dp"
                             android:src="@drawable/h3"
-                            android:layout_margin="10dp" />
+                            tools:srcCompat="@android:drawable/sym_def_app_icon" />
 
                         <ImageView
                             android:id="@+id/restaurantImage5"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_centerInParent="true"
+                            android:layout_margin="10dp"
                             android:src="@drawable/h3"
-                            android:layout_margin="10dp" />
+                            tools:srcCompat="?android:attr/galleryItemBackground" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

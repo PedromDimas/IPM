@@ -32,6 +32,8 @@ public class InfoWindowClicker implements GoogleMap.OnInfoWindowClickListener {
             }
         }
 
+        System.out.println("DEXCR" + restaurant.getDescription());
+
 
         intent.putExtra("mainImage", restaurant.getMainImage());
         intent.putExtra("name", restaurant.getName());
@@ -39,6 +41,7 @@ public class InfoWindowClicker implements GoogleMap.OnInfoWindowClickListener {
         intent.putExtra("price", restaurant.getPrice());
         intent.putExtra("latitude", restaurant.getLatitude());
         intent.putExtra("longitude", restaurant.getLongitude());
+        intent.putExtra("description",restaurant.getDescription());
         //intent.putExtra("imagesIds", restaurant.getImagesIds().toArray());
         context.startActivity(intent);
 

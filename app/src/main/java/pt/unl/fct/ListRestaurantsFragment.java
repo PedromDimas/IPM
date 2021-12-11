@@ -96,6 +96,7 @@ public class ListRestaurantsFragment extends Fragment {
                 intent.putExtra("price", restaurant.getPrice());
                 intent.putExtra("latitude", restaurant.getLatitude());
                 intent.putExtra("longitude", restaurant.getLongitude());
+                intent.putExtra("description",restaurant.getDescription());
                 //intent.putExtra("imagesIds", restaurant.getImagesIds().toArray());
                 startActivity(intent);
             }
