@@ -1,6 +1,5 @@
 package pt.unl.fct.data.model;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +11,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import pt.unl.fct.R;
 
@@ -38,10 +36,10 @@ public class RestaurantListAdapter extends ArrayAdapter<Restaurant> {
         TextView restaurantRating = convertView.findViewById(R.id.restaurantRating);
         TextView restaurantPrice = convertView.findViewById(R.id.restaurantPrice);
 
-        restaurantImage.setImageResource(restaurant.restaurantImage);
-        restaurantName.setText(restaurant.restaurantName);
-        restaurantRating.setText(restaurant.restaurantRating);
-        restaurantPrice.setText(restaurant.restaurantPrice);
+        restaurantImage.setImageResource(restaurant.mainImage);
+        restaurantName.setText(restaurant.name);
+        restaurantRating.setText(restaurant.rating);
+        restaurantPrice.setText(restaurant.price);
 
         return convertView;
     }

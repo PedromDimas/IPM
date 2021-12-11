@@ -1,5 +1,6 @@
 package pt.unl.fct;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -86,8 +87,17 @@ public class ListRestaurantsFragment extends Fragment {
         lv.setClickable(true);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                Intent intent = new Intent(getActivity(), SelectedRestaurantActivity.class);
+                Restaurant restaurant = restaurantList.getRestaurantList().get(position);
+                intent.putExtra("mainImage", restaurant.getMainImage());
+                intent.putExtra("name", restaurant.getName());
+                intent.putExtra("rating", restaurant.getRating());
+                intent.putExtra("price", restaurant.getPrice());
+                intent.putExtra("latitude", restaurant.getLatitude());
+                intent.putExtra("longitude", restaurant.getLongitude());
+                //intent.putExtra("imagesIds", restaurant.getImagesIds().toArray());
+                startActivity(intent);
             }
         });
 
