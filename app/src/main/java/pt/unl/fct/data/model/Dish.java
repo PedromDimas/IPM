@@ -5,11 +5,22 @@ public class Dish {
     private double price;
     int mainImage;
 
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    int count;
+
     public Dish(String name, String description, double price, int mainImage){
         this.name = name;
         this.description = description;
         this.price = price;
         this.mainImage = mainImage;
+        this.count = 0;
     }
 
     public String getName() {

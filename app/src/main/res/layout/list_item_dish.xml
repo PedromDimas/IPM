@@ -83,21 +83,23 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/btn_remove_dish"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_marginLeft="5dp"
-                    tools:text="+" />
+                    tools:text="-" />
 
                 <Button
+                    android:id="@+id/btn_add_dish"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_marginLeft="5dp"
-                    android:text="-" />
+                    android:text="+" />
             </LinearLayout>
 
 
             <TextView
-                android:id="@+id/dishAmount"
+                android:id="@+id/dish_ammount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
