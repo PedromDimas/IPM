@@ -156,9 +156,10 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_security_white"
                 android:drawableLeft="@drawable/ic_security_white"
                 android:drawablePadding="10dp"
-                android:drawableStart="@drawable/ic_security_white"
+                android:password="true"
                 android:text="lalala123" />
 
         </com.google.android.material.textfield.TextInputLayout>
