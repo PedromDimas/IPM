@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
+import pt.unl.fct.data.BookTableActivity;
 import pt.unl.fct.data.model.Restaurant;
 
 public class SelectedRestaurantActivity extends AppCompatActivity {
@@ -37,9 +38,14 @@ public class SelectedRestaurantActivity extends AppCompatActivity {
             restaurantPrice.setText(restaurant.getPrice());
         }
 
-        Button btn = findViewById(R.id.oerder_btn);
-        btn.setOnClickListener(v -> {
+        Button orderBtn = findViewById(R.id.order_btn);
+        orderBtn.setOnClickListener(v -> {
             startActivity(new Intent(SelectedRestaurantActivity.this,OrderActivity.class));
+        });
+
+        Button bookBtn = findViewById(R.id.book_btn);
+        bookBtn.setOnClickListener(v -> {
+            startActivity(new Intent(SelectedRestaurantActivity.this,BookTableActivity.class));
         });
     }
 }

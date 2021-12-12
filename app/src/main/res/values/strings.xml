@@ -11,4 +11,13 @@
     <string name="login_failed">"Login failed"</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="schedule">
+        <item>12:00</item>
+        <item>13:30</item>
+        <item>15:00</item>
+        <item>18:30</item>
+        <item>20:00</item>
+        <item>21:30</item>
+    </string-array>
 </resources>

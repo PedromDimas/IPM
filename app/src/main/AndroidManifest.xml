@@ -29,7 +29,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-
         <activity
             android:name=".FinishOrderActivity"
             android:exported="false" />
@@ -41,6 +40,9 @@
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".data.BookTableActivity"
             android:exported="false" />
         <activity
             android:name=".RegisterActivity"

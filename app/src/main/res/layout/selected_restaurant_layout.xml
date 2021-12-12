@@ -76,13 +76,14 @@
                 android:layout_marginTop="40dp">
 
                 <Button
+                    android:id="@+id/book_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
                     android:text="Book a table" />
 
                 <Button
-                    android:id="@+id/oerder_btn"
+                    android:id="@+id/order_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
