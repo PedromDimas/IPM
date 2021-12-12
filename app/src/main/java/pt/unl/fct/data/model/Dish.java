@@ -1,7 +1,5 @@
 package pt.unl.fct.data.model;
 
-import java.util.List;
-
 public class Dish {
     private String name, description;
     private double price;
