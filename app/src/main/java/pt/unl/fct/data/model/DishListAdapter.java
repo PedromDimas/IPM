@@ -32,7 +32,7 @@ public class DishListAdapter extends ArrayAdapter<Dish> {
 
         Dish dish = (Dish) getItem(position);
 
-        if (convertView == null) convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item_restaurant,parent,false);
+        if (convertView == null) convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item_dish,parent,false);
 
 
         ImageView imageView = convertView.findViewById(R.id.dishImage);
