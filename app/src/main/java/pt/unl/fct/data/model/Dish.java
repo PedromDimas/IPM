@@ -1,6 +1,8 @@
 package pt.unl.fct.data.model;
 
-public class Dish {
+import java.io.Serializable;
+
+public class Dish implements Serializable {
     private String name, description;
     private double price;
     int mainImage;
