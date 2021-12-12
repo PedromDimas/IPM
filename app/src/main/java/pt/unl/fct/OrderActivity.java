@@ -14,9 +14,12 @@ public class OrderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
-
+        DishList dl = new DishList();
         ListView lv = findViewById(R.id.lvdishes);
-        lv.setAdapter(new DishListAdapter(this,new DishList().getList()));
+        lv.setAdapter(new DishListAdapter(this,dl.getList()));
+
+
+        
 
     }
 
