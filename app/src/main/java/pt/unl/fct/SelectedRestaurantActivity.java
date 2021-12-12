@@ -38,5 +38,10 @@ public class SelectedRestaurantActivity extends AppCompatActivity {
             restaurantRating.setText(restaurant.getRating());
             restaurantPrice.setText(restaurant.getPrice());
         }
+
+        Button btn = findViewById(R.id.oerder_btn);
+        btn.setOnClickListener(v -> {
+            startActivity(new Intent(SelectedRestaurantActivity.this,OrderActivity.class));
+        });
     }
 }

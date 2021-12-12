@@ -172,10 +172,11 @@
                     android:text="Book" />
 
                 <Button
+                    android:id="@+id/oerder_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
-                    android:text="Order"/>
+                    android:text="Order" />
             </LinearLayout>
 
         </LinearLayout>

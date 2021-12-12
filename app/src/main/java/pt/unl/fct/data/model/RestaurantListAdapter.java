@@ -1,5 +1,6 @@
 package pt.unl.fct.data.model;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,9 +17,9 @@ import pt.unl.fct.R;
 
 public class RestaurantListAdapter extends ArrayAdapter<Restaurant> {
 
-    public RestaurantListAdapter(FragmentActivity activity, ArrayList<Restaurant> userArrayList){
+    public RestaurantListAdapter(Context context, ArrayList<Restaurant> userArrayList){
 
-        super(activity,R.layout.list_item_restaurant,userArrayList);
+        super(context,R.layout.list_item_restaurant,userArrayList);
 
     }
 

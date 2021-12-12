@@ -18,6 +18,6 @@
     <fragment
         android:id="@+id/mapsFragment"
         android:name="pt.unl.fct.MapsFragment"
-        android:label="fragment_maps"
+        android:label="Find Restaurant"
         tools:layout="@layout/fragment_maps" />
 </navigation>
