@@ -35,12 +35,12 @@ public class DishListAdapter extends ArrayAdapter<Dish> {
         if (convertView == null) convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item_restaurant,parent,false);
 
 
-        ImageView imageView = convertView.findViewById(R.id.dishName);
+        ImageView imageView = convertView.findViewById(R.id.dishImage);
         TextView dishName = convertView.findViewById(R.id.dishName);
         TextView dishDes = convertView.findViewById(R.id.dishDescription);
         TextView dishPrice = convertView.findViewById(R.id.dishPrice);
 
-        imageView.setImageResource(dish.mainImage);
+        imageView.setImageResource(dish.getMainImage());
         dishName.setText(dish.getName());
         dishDes.setText(dish.getDescription());
         dishPrice.setText(String.valueOf(dish.getPrice()));
