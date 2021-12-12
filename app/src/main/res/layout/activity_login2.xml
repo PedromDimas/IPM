@@ -101,7 +101,8 @@
             android:id="@+id/txtview_create_acc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create an account!" />
+            android:text="Create an account!"
+            android:textColor="@color/black"/>
 
     </LinearLayout>
 

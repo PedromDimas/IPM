@@ -128,7 +128,8 @@
             android:id="@+id/txtview_sign_in"
             android:layout_width="61dp"
             android:layout_height="match_parent"
-            android:text="Sign in!" />
+            android:text="Sign in!"
+            android:textColor="@color/black"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
