@@ -126,7 +126,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_baseline_mail_outline_24"
                 android:drawablePadding="10dp"
-                android:drawable_left="@drawable/ic_person"
+                android:drawableStart="@drawable/ic_baseline_mail_outline_24"
                 android:text="jsantos@gmail.com" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -142,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_baseline_local_phone_24"
                 android:drawablePadding="10dp"
-                android:drawable_left="@drawable/ic_person"
+                android:drawableStart="@drawable/ic_baseline_local_phone_24"
                 android:text="+351 666 382 942" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -158,7 +158,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_security_white"
                 android:drawablePadding="10dp"
-                android:drawable_left="@drawable/ic_person"
+                android:drawableStart="@drawable/ic_security_white"
                 android:text="lalala123" />
 
         </com.google.android.material.textfield.TextInputLayout>

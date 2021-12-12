@@ -15,6 +15,7 @@ import java.util.List;
 import pt.unl.fct.data.model.Dish;
 import pt.unl.fct.data.model.DishList;
 import pt.unl.fct.data.model.DishListAdapter;
+import pt.unl.fct.data.model.DishListFinalAdapter;
 
 public class FinishOrderActivity extends AppCompatActivity {
     private double total = 0;
@@ -38,7 +39,7 @@ public class FinishOrderActivity extends AppCompatActivity {
         }
 
         ListView lv = findViewById(R.id.dishListView);
-        lv.setAdapter(new DishListAdapter(this,finalDL));
+        lv.setAdapter(new DishListFinalAdapter(this,finalDL));
         //Set Content
 
 
