@@ -13,13 +13,14 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import pt.unl.fct.R;
 
 public class DishListAdapter extends ArrayAdapter<Dish> {
 
 
-    public DishListAdapter(Context context, ArrayList<Dish> dishArrayList){
+    public DishListAdapter(Context context, List<Dish> dishArrayList){
 
         super(context, R.layout.list_item_restaurant,dishArrayList);
 
@@ -34,15 +35,15 @@ public class DishListAdapter extends ArrayAdapter<Dish> {
         if (convertView == null) convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item_restaurant,parent,false);
 
 
-        ImageView restaurantImage = convertView.findViewById(R.id.restaurantImage);
-        TextView restaurantName = convertView.findViewById(R.id.restaurantName);
-        TextView restaurantRating = convertView.findViewById(R.id.restaurantRating);
-        TextView restaurantPrice = convertView.findViewById(R.id.restaurantPrice);
+        ImageView imageView = convertView.findViewById(R.id.dishName);
+        TextView dishName = convertView.findViewById(R.id.dishName);
+        TextView dishDes = convertView.findViewById(R.id.dishDescription);
+        TextView dishPrice = convertView.findViewById(R.id.dishPrice);
 
-        //dish.setMainImage(restaurant.mainImage);
-       // restaurantName.setText(restaurant.name);
-        //restaurantRating.setText(restaurant.rating);
-        //restaurantPrice.setText(restaurant.price);
+        imageView.setImageResource(dish.mainImage);
+        dishName.setText(dish.getName());
+        dishDes.setText(dish.getDescription());
+        dishPrice.setText(String.valueOf(dish.getPrice()));
 
         return convertView;
     }
