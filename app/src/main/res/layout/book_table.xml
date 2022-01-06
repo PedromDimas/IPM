@@ -78,8 +78,10 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Table number..."
-                    android:textSize="8sp"
+                    android:id="@+id/tablePick"
+                    android:inputType = "number"
+                    android:hint="4"
+                    android:textSize="16sp"
                     android:textColor="@color/common_google_signin_btn_text_light"/>
                 <Button
                     android:layout_width="wrap_content"

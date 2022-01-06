@@ -1,4 +1,4 @@
-package pt.unl.fct.data;
+package pt.unl.fct;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,11 +31,14 @@ public class BookTableActivity extends AppCompatActivity implements AdapterView.
 
     private DatePickerDialog datePickerDialog;
     private Button datePick;
+    private EditText tableNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.book_table);
+
+        tableNumber = findViewById(R.id.tablePick);
 
         datePick = findViewById(R.id.datePick);
         datePick.setText(getTodaysDate());
@@ -49,15 +53,22 @@ public class BookTableActivity extends AppCompatActivity implements AdapterView.
 
         Button confirmBooking = findViewById(R.id.confirmBooking);
         confirmBooking.setOnClickListener(v -> {
-            Toast.makeText(this,"Booking confirmed",Toast.LENGTH_LONG).show();
-            startActivity(new Intent(this, MainAppActivity.class));
+            Intent newIntent = new Intent(this, ConfirmBookActivity.class);
+            newIntent.putExtra("date", datePick.getText());
+            newIntent.putExtra("time", timePick.getSelectedItem().toString());
+
+            if (!tableNumber.getText().toString().isEmpty())
+                newIntent.putExtra("tableNumber", tableNumber.getText().toString());
+            else
+                newIntent.putExtra("tableNumber", "4");
+
+            startActivity(newIntent);
         });
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String text = parent.getItemAtPosition(position).toString();
-        Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -65,8 +76,7 @@ public class BookTableActivity extends AppCompatActivity implements AdapterView.
 
     }
 
-    private String getTodaysDate()
-    {
+    private String getTodaysDate() {
         Calendar cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH);
@@ -75,13 +85,10 @@ public class BookTableActivity extends AppCompatActivity implements AdapterView.
         return makeDateString(day, month, year);
     }
 
-    private void initDatePicker()
-    {
-        DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener()
-        {
+    private void initDatePicker() {
+        DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
-            public void onDateSet(DatePicker datePicker, int year, int month, int day)
-            {
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                 month = month + 1;
                 String date = makeDateString(day, month, year);
                 datePick.setText(date);
@@ -96,34 +103,29 @@ public class BookTableActivity extends AppCompatActivity implements AdapterView.
         int style = AlertDialog.THEME_HOLO_LIGHT;
 
         datePickerDialog = new DatePickerDialog(this, style, dateSetListener, year, month, day);
-        //datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
-
     }
 
-    private String makeDateString(int day, int month, int year)
-    {
+    private String makeDateString(int day, int month, int year) {
         return getMonthFormat(month) + " " + day + " " + year;
     }
 
-    private String getMonthFormat(int month)
-    {
-        if(month == 1)return "JAN";
-        if(month == 2)return "FEB";
-        if(month == 3) return "MAR";
-        if(month == 4) return "APR";
-        if(month == 5)return "MAY";
-        if(month == 6)return "JUN";
-        if(month == 7)return "JUL";
-        if(month == 8)return "AUG";
-        if(month == 9)return "SEP";
-        if(month == 10)return "OCT";
-        if(month == 11)return "NOV";
-        if(month == 12)return "DEC";
+    private String getMonthFormat(int month) {
+        if (month == 1) return "JAN";
+        if (month == 2) return "FEB";
+        if (month == 3) return "MAR";
+        if (month == 4) return "APR";
+        if (month == 5) return "MAY";
+        if (month == 6) return "JUN";
+        if (month == 7) return "JUL";
+        if (month == 8) return "AUG";
+        if (month == 9) return "SEP";
+        if (month == 10) return "OCT";
+        if (month == 11) return "NOV";
+        if (month == 12) return "DEC";
         return "JAN";
     }
 
-    public void openDatePicker(View view)
-    {
+    public void openDatePicker(View view) {
         datePickerDialog.show();
     }
 }

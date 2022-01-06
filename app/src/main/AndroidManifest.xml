@@ -33,6 +33,9 @@
             android:name=".FinishOrderActivity"
             android:exported="false" />
         <activity
+            android:name=".ConfirmBookActivity"
+            android:exported="false" />
+        <activity
             android:name=".OrderActivity"
             android:exported="false" />
         <activity
@@ -42,7 +45,7 @@
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".data.BookTableActivity"
+            android:name=".BookTableActivity"
             android:exported="false" />
         <activity
             android:name=".RegisterActivity"

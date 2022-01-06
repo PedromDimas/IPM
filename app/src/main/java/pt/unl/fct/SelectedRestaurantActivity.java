@@ -8,9 +8,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.ArrayList;
-
-import pt.unl.fct.data.BookTableActivity;
 import pt.unl.fct.data.model.Restaurant;
 
 public class SelectedRestaurantActivity extends AppCompatActivity {
